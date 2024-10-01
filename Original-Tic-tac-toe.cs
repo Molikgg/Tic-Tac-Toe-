@@ -38,7 +38,7 @@ class TicTacToe
         {
             return false;
         }
-        currentPlayer = currentPlayer == Player1 ? currentPlayer = Player2 : currentPlayer = Player1;
+        currentPlayer = currentPlayer == Player1 ? Player2 : Player1;
         return true;
 
     }
