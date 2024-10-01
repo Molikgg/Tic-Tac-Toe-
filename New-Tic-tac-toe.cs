@@ -43,7 +43,7 @@ class TicTacToe
         {
             return false;
         }
-        currentPlayer = currentPlayer == Player1 ? currentPlayer = Player2 : currentPlayer = Player1; // player2 nothing happenes 
+        currentPlayer = currentPlayer == Player1 ? currentPlayer = Player2 : currentPlayer = Player1; 
         return true;
 
     }
@@ -96,7 +96,7 @@ static class Rules
 {
     public static bool WinningCondition(Boardmap Boardmap)
     {
-        if ((Boardmap.A == Boardmap.B && Boardmap.B == Boardmap.C && Boardmap.C != '~') || //Columb static its same for both as one instance is being shared instead of entire member of class 
+        if ((Boardmap.A == Boardmap.B && Boardmap.B == Boardmap.C && Boardmap.C != '~') || //Columb  
             (Boardmap.D == Boardmap.E && Boardmap.E == Boardmap.F && Boardmap.F != '~') ||
             (Boardmap.G == Boardmap.H && Boardmap.H == Boardmap.I && Boardmap.I != '~') ||
 
