@@ -115,7 +115,7 @@ static class Rules
     {
         for (; ; )
         {
-            if ((Current.Player == 1 && Boardmap.G != '~') || // Current would be different for different instances if in multiple board running simentaniulsy 
+            if ((Current.Player == 1 && Boardmap.G != '~') || 
                 (Current.Player == 2 && Boardmap.H != '~') ||
                 (Current.Player == 3 && Boardmap.I != '~') ||
                 (Current.Player == 4 && Boardmap.D != '~') ||
