@@ -40,13 +40,13 @@ class TicTacToe
         {
             return false;
         }
-        CurrentPlayer = CurrentPlayer == Player1 ? CurrentPlayer = Player2 : CurrentPlayer = Player1; //Curretn player2 nothing 
+        CurrentPlayer = CurrentPlayer == Player1 ? Player2 : Player1; 
         return true;
     }
 }
 class Players
 {
-    public int Player { get; set; }  // Read ( return ) player 1 and write ( = value) Player 1  --------------------------------------------------REMOVE THIS WHEN GIVING ON DISCORD
+    public int Player { get; set; }  
     public char Symbol { get; private set; }
 
     public Players(char symbol)
@@ -143,7 +143,7 @@ static class Rules
 static class Boardmap //just figured out the class could be made static too( Not intentiallly thought of doing so)
 {
 
-    public static char G = '~';// the reason i used static is beacuse A is shared to both players and effect both gameplay ifone fills it   
+    public static char G = '~';// the reason i used static is beacuse A is shared to both players and effect both gameplay fills it   
     public static char A = '~';
     public static char B = '~';
     public static char C = '~';
