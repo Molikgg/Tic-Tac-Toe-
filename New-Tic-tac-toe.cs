@@ -29,7 +29,7 @@ class TicTacToe
 
     bool PlayerLoop()
     {
-        Logic = new Gamelogic(currentPlayer, Boardmap); // //  instantiated in a loop, which might not be the best design choice.but i cant figure out anything else 
+        Logic = new Gamelogic(currentPlayer, Boardmap); // //  instantiated in a loop, which might not be the best design choice 
         Console.Write($"'{currentPlayer.Symbol}' Player Your Turn: ");
         currentPlayer.Player = int.Parse(Console.ReadLine()!);
         Console.Clear();
