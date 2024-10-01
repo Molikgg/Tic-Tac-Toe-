@@ -7,7 +7,6 @@ class TicTacToe
     Gamelogic Logic;
     Players currentPlayer;
     readonly Boardmap Boardmap;
-    bool Gamestate;
 
     public TicTacToe()
     {
@@ -15,16 +14,12 @@ class TicTacToe
         Player1 = new Players('X');
         currentPlayer = Player1; // To begin with 'X'
         Player2 = new Players('O');
-        Gamestate = true;
     }
 
     public void Start()
     {
         Boardmap.BoardLayout(); // To print out the empty Board
-        while (Gamestate)
-        {
-            Gamestate = PlayerLoop();
-        }
+        while (PlayerLoop()) { }
     }
 
     bool PlayerLoop()
@@ -43,7 +38,7 @@ class TicTacToe
         {
             return false;
         }
-        currentPlayer = currentPlayer == Player1 ? currentPlayer = Player2 : currentPlayer = Player1; 
+        currentPlayer = currentPlayer == Player1 ? currentPlayer = Player2 : currentPlayer = Player1;
         return true;
 
     }
@@ -115,7 +110,7 @@ static class Rules
     {
         for (; ; )
         {
-            if ((Current.Player == 1 && Boardmap.G != '~') || 
+            if ((Current.Player == 1 && Boardmap.G != '~') ||
                 (Current.Player == 2 && Boardmap.H != '~') ||
                 (Current.Player == 3 && Boardmap.I != '~') ||
                 (Current.Player == 4 && Boardmap.D != '~') ||
@@ -131,7 +126,7 @@ static class Rules
         }
 
     }
-    public static bool Draw(Boardmap Boardmap) 
+    public static bool Draw(Boardmap Boardmap)
     {
         if (Boardmap.A != '~' && Boardmap.B != '~' && Boardmap.C != '~' &&
              Boardmap.D != '~' && Boardmap.E != '~' && Boardmap.F != '~' &&
@@ -152,7 +147,7 @@ static class Rules
     }
 }
 
-class Boardmap 
+class Boardmap
 {
 
     public char G = '~';
@@ -172,7 +167,7 @@ class Boardmap
         int columb;
         void SymbolColor()
         {
-            if (Tile[columb, row] == 'X') { Console.ForegroundColor = ConsoleColor.Green; } 
+            if (Tile[columb, row] == 'X') { Console.ForegroundColor = ConsoleColor.Green; }
 
             else if (Tile[columb, row] == 'O') { Console.ForegroundColor = ConsoleColor.Red; }
 
@@ -204,6 +199,10 @@ class Boardmap
                     Console.WriteLine("--+---+--"); // it does this and then leaves line thats why writing console.Writeline Earlier is important 
                 }
             }
+            Console.WriteLine(); // To leave Space when called
+        }
+    }
+}
             Console.WriteLine(); // To leave Space when called
         }
     }
